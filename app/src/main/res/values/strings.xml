@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NewsRSA</string>
+    <string name="home">Home</string>
+    <string name="read">Read</string>
+    <string name="notification">Notification</string>
+    <string name="local">Local</string>
+    <string name="national">National</string>
+    <string name="international">International</string>
+    <string name="error">Error</string>
+    <string name="ok_text">Okay</string>
+    <string name="rooted_error_msg">App can not run rooted device</string>
+    <string name="offline_sub_title">No internet! Please connect to WiFi or cellular data.</string>
+    <string name="no_results">No Result Found!</string>
+    <string name="notification_title">"RSA News "</string>
+    <string name="notification_content">Some News are mark as Read later.</string>
+    <string name="news">News</string>
+    <string name="read_more">Read More</string>
+</resources>

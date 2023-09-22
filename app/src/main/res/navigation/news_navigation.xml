@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_navigation"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/tabFragment"
+        android:name="com.rsa.newsrsa.ui.news.TabFragment"
+        android:label="@string/home">
+        <action
+            android:id="@+id/action_tabFragment_to_readmoreFragment"
+            app:destination="@id/readmoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsReadLaterFragment"
+        android:name="com.rsa.newsrsa.ui.readlater.NewsReadLaterFragment"
+        android:label="@string/read">
+        <action
+            android:id="@+id/action_newsReadLaterFragment_to_readmoreFragment"
+            app:destination="@id/readmoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readmoreFragment"
+        android:name="com.rsa.newsrsa.ui.readmore.ReadMoreFragment"
+        android:label="@string/news" >
+        <deepLink app:uri="http://com.rsa.newsrsa.news/{newID}"/>
+        <argument
+            android:name="newID"
+            app:argType="string"
+            android:defaultValue="in1" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.rsa.newsrsa.ui.splash.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_tabFragment"
+            app:destination="@id/tabFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_newsReadLaterFragment"
+            app:destination="@id/newsReadLaterFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
