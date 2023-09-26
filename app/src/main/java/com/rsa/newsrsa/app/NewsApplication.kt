@@ -9,9 +9,9 @@ import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
 import com.rsa.newsrsa.common.PreferencesHelper
 import com.rsa.newsrsa.data.db.AppDataBase
-import com.rsa.newsrsa.data.repository.NewsLocalRepository
 import com.rsa.newsrsa.utils.NewsWorker
 import dagger.hilt.android.HiltAndroidApp
+import net.sqlcipher.database.SQLiteDatabase
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -21,9 +21,12 @@ class NewsApplication : Application(), Configuration.Provider {
     lateinit var customWorkerFactory: CustomWorkerFactory
     @Inject
     lateinit var preferencesHelper: PreferencesHelper
+    private val PASSCODE = "SWEN1PASS"
     override fun onCreate() {
         super.onCreate()
         Timber.plant(Timber.DebugTree())
+        val key = SQLiteDatabase.getBytes(PASSCODE.toCharArray())
+        SQLiteDatabase.loadLibs(this)
     }
 
     override fun onTerminate() {

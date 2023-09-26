@@ -2,13 +2,11 @@ package com.rsa.newsrsa.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.rsa.newsrsa.R
 import com.rsa.newsrsa.api.response_handler.NewsData.Article
 import com.rsa.newsrsa.databinding.RowListItemForMoreBinding
-import javax.inject.Inject
 
 class ArticleAdapter(private val mList : List<Article>) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
     private lateinit var binding: RowListItemForMoreBinding

@@ -1,12 +1,9 @@
 package com.rsa.newsrsa.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
-import androidx.navigation.NavDirections
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -16,13 +13,10 @@ import androidx.work.PeriodicWorkRequest
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.rsa.newsrsa.R
-import com.rsa.newsrsa.common.PreferencesHelper
 import com.rsa.newsrsa.databinding.ActivityMainBinding
-import com.rsa.newsrsa.ui.splash.SplashFragmentDirections
 import com.rsa.newsrsa.utils.NewsWorker
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.TimeUnit
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -42,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.tabFragment,
                 R.id.newsReadLaterFragment,
-                R.id.notificationFragment
+                R.id.readmoreFragment
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

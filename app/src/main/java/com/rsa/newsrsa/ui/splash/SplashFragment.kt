@@ -14,17 +14,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.rsa.newsrsa.BuildConfig
 import com.rsa.newsrsa.R
-import com.rsa.newsrsa.common.PreferencesHelper
 import com.rsa.newsrsa.databinding.FragmentSplashBinding
 import com.rsa.newsrsa.ui.activity.MainActivity
 import com.scottyab.rootbeer.RootBeer
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class SplashFragment : Fragment() {

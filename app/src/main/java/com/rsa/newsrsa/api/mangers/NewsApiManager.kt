@@ -2,7 +2,6 @@ package com.rsa.newsrsa.api.mangers
 
 import com.rsa.newsrsa.api.apicall.ApiService
 import com.rsa.newsrsa.api.response_handler.NewsData
-import okhttp3.ResponseBody
 import retrofit2.Response
 import javax.inject.Inject
 

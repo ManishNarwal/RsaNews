@@ -22,12 +22,15 @@
     <fragment
         android:id="@+id/readmoreFragment"
         android:name="com.rsa.newsrsa.ui.readmore.ReadMoreFragment"
-        android:label="@string/news" >
-        <deepLink app:uri="http://com.rsa.newsrsa.news/{newID}"/>
+        android:label="@string/news">
+        <deepLink
+            android:autoVerify="true"
+            app:uri="https://www.newsrsa.com/news/{new_id}" />
         <argument
-            android:name="newID"
+            android:name="new_id"
+            android:defaultValue="@null"
             app:argType="string"
-            android:defaultValue="in1" />
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"

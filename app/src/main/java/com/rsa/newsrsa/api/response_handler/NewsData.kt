@@ -3,7 +3,6 @@ package com.rsa.newsrsa.api.response_handler
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import javax.annotation.Nullable

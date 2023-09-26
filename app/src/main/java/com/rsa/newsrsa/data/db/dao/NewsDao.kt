@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.rsa.newsrsa.api.response_handler.NewsData.Article as Article
+import com.rsa.newsrsa.api.response_handler.NewsData.Article
 import java.util.*
 
 @Dao
@@ -21,9 +21,13 @@ interface NewsDao {
 
     @Query("SELECT * FROM Article WHERE ReadLater = 0 AND Country=:country")
     fun fetchArticle(country: String): PagingSource<Int, Article>
+//    @Query("SELECT * FROM Article WHERE ReadLater = 0 AND Country=:country")
+//    fun fetchArticle(country: String): List<Int, Article>
 
     @Query("SELECT * FROM Article WHERE ReadLater=1")
     fun fetchReadLaterArticle(): PagingSource<Int, Article>
+//    @Query("SELECT * FROM Article WHERE ReadLater=1")
+//    fun fetchReadLaterArticle(): List<Int, Article>
 
     @Query("SELECT * FROM Article WHERE id=:id")
     suspend fun fetchArticleByID(id : String): List<Article>

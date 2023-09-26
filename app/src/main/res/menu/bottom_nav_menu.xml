@@ -9,7 +9,7 @@
         android:title="@string/read"
         android:icon="@drawable/baseline_read_24" />
     <item
-        android:id="@+id/notificationFragment"
+        android:id="@+id/readmoreFragment"
         android:title="@string/read_more"
         android:icon="@drawable/baseline_notifications_24" />
 </menu>

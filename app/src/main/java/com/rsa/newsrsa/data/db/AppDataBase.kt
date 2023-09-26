@@ -5,15 +5,15 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.rsa.newsrsa.api.response_handler.ArticleRemoteKey
-import com.rsa.newsrsa.api.response_handler.NewsData.Article as Article
+import com.rsa.newsrsa.api.response_handler.NewsData.Article
 import com.rsa.newsrsa.data.db.dao.NewsDao
 import com.rsa.newsrsa.data.db.dao.RemoteKeyDao
 import com.rsa.newsrsa.data.db.typeconverter.DateConverter
 import com.rsa.newsrsa.data.db.typeconverter.StringTypeConverter
+import net.sqlcipher.database.SupportFactory
 
+private const val PASSCODE = "SWEN1PASS"
 @Database(
     entities = [Article::class,ArticleRemoteKey::class], version = 1, exportSchema = false
 )
@@ -32,6 +32,7 @@ abstract class AppDataBase : RoomDatabase() {
 
         private fun buildDatabase(appContext: Context) =
             Room.databaseBuilder(appContext, AppDataBase::class.java, "NewsArticleDB")
+                .openHelperFactory(SupportFactory(PASSCODE.toByteArray()))
                 .fallbackToDestructiveMigration().build()
     }
 }

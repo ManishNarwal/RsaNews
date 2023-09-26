@@ -9,8 +9,8 @@ import androidx.room.withTransaction
 import com.rsa.newsrsa.BuildConfig
 import com.rsa.newsrsa.api.mangers.NewsApiManager
 import com.rsa.newsrsa.api.response_handler.ArticleRemoteKey
+import com.rsa.newsrsa.api.response_handler.NewsData.Article
 import com.rsa.newsrsa.common.NetworkHelper
-import com.rsa.newsrsa.api.response_handler.NewsData.Article as Article
 import com.rsa.newsrsa.common.PreferencesHelper
 import com.rsa.newsrsa.data.db.AppDataBase
 import com.rsa.newsrsa.utils.showToast

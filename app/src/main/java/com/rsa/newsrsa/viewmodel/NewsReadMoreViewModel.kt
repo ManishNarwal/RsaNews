@@ -1,7 +1,6 @@
 package com.rsa.newsrsa.viewmodel
 
 import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.rsa.newsrsa.api.response_handler.NewsData.Article
 import com.rsa.newsrsa.repository.NewsRepository

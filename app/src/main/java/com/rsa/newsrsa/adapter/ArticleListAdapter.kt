@@ -13,7 +13,6 @@ import com.rsa.newsrsa.api.response_handler.NewsData.Article
 import com.rsa.newsrsa.data.repository.NewsLocalRepository
 import com.rsa.newsrsa.databinding.RowListItemBinding
 import com.rsa.newsrsa.ui.news.TabFragmentDirections
-import com.rsa.newsrsa.ui.readlater.NewsReadLaterFragmentDirections
 import com.rsa.newsrsa.utils.ResourcesProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

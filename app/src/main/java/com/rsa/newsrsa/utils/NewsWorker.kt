@@ -19,15 +19,11 @@ import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.rsa.newsrsa.R
 import com.rsa.newsrsa.data.db.AppDataBase
-import com.rsa.newsrsa.data.db.dao.NewsDao
-import com.rsa.newsrsa.data.repository.NewsLocalRepository
 import com.rsa.newsrsa.ui.activity.MainActivity
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import timber.log.Timber
-import javax.inject.Inject
 
 @HiltWorker
 class NewsWorker @AssistedInject constructor(

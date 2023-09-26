@@ -1,7 +1,6 @@
 package com.rsa.newsrsa.di
 
 import android.content.Context
-import com.rsa.newsrsa.api.response_handler.ArticleRemoteKey
 import com.rsa.newsrsa.common.PreferencesHelper
 import com.rsa.newsrsa.data.db.AppDataBase
 import com.rsa.newsrsa.data.db.dao.NewsDao
@@ -13,7 +12,6 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
